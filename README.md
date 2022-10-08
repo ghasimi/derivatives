@@ -6,17 +6,21 @@ Summary notes on derivatives.
 
 Create portfolio $\Pi$ from a short position in one call option $f$, and a long position in $\delta$ units of the underlying, $X$, where $\delta = \frac{\partial f}{\partial X}$:
 
-$$\tag1
-\Pi = -f + \frac{\partial f}{\partial X} X
-$$
+$$\tag1$$
+
+$$\Pi = -f + \frac{\partial f}{\partial X} X$$
 
 Which implies:
 
-$$\tag2 d\Pi = -df + \frac{\partial f}{\partial X} \ dX$$
+$$\tag2$$
+
+$$d\Pi = -df + \frac{\partial f}{\partial X} \ dX$$
 
 From another view, such portfolio has no risk because changes in the long and short position will offset each other. Therefore, the portfolio must yield risk-free return:
 
-$$\tag3 \ \ 
+$$\tag3$$
+
+$$ 
 \frac{d\Pi}{\Pi} = r \ dt \
 \Rightarrow \ d\Pi = r \Pi \ dt
 $$
@@ -26,7 +30,10 @@ $$\tag4 d\Pi = -rf \ dt + \frac{\partial f}{\partial X} r X \ dt$$
 
 Assume the underlying follows this stochastic differential equation, where $\mu$ is replaced with $r$ accodring to the risk-neutral setting:
 
-$$\tag5
+
+$$\tag5$$
+
+$$
 dX = r X dt + \sigma X dW
 $$
 
@@ -50,13 +57,23 @@ Now in (2), substitute $d\Pi$ with (4), $dX$ with (5), and $df$ with (6):
 
 $$\tag7$$
 
-$$-rf \ dt + \frac{\partial f}{\partial X} r X \ dt =
+$$-rf \ {\color{blue}dt} + 
+{\color{red}\frac{\partial f}{\partial X} r X} \ {\color{blue}dt} =
 -(\frac {\partial f}{\partial t} + 
 \frac {\partial f}{\partial X} r X + 
-\frac {1}{2} \frac{\partial^2 f}{\partial x^2} \sigma^2 X^2)dt -
-\frac {\partial f}{\partial X} \sigma X dW +
-\frac{\partial f}{\partial X} r X \ dt +
-\frac{\partial f}{\partial X} \sigma X  dW
+\frac {1}{2} \frac{\partial^2 f}{\partial x^2} \sigma^2 X^2) \ {\color{blue}dt} -
+{\color{maroon}\frac {\partial f}{\partial X} \sigma X dW} +
+{\color{red}\frac{\partial f}{\partial X} r X} \ {\color{blue}dt} +
+{\color{maroon}\frac {\partial f}{\partial X} \sigma X dW}
 $$
 
+Which simplifies to:
+
+$$\tag8$$
+
+$$-rf  +
+\frac {\partial f}{\partial t} + 
+\frac {\partial f}{\partial X} r X + 
+\frac {1}{2} \frac{\partial^2 f}{\partial x^2} \sigma^2 X^2 = 0
+$$
 
