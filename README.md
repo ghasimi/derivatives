@@ -36,8 +36,7 @@ $$Where \ dW = \varepsilon \sqrt{dt} \ \, i.e. \varepsilon \sim N(0,1) \rightarr
 Given (3), and since $f\rightarrow f(X,t)$, from [Ito's lemma](https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma):
 
 
-$$\tag6
-$$
+$$\tag6$$
 
 $$df = 
 (\frac {\partial f}{\partial t} + 
@@ -49,7 +48,15 @@ $$
 
 Now in (2), substitute $d\Pi$ with (4), $dX$ with (5), and $df$ with (6):
 
-$$\tag7
+$$\tag7$$
+
+$$-rf \ dt + \frac{\partial f}{\partial X} r X \ dt =
+-(\frac {\partial f}{\partial t} + 
+\frac {\partial f}{\partial X} r X + 
+\frac {1}{2} \frac{\partial^2 f}{\partial x^2} \sigma^2 X^2)dt -
+\frac {\partial f}{\partial X} \sigma X dW +
+\frac{\partial f}{\partial X} r X \ dt +
+\frac{\partial f}{\partial X} \sigma X  dW
 $$
 
 
