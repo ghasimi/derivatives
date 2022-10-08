@@ -4,7 +4,7 @@ Summary notes on derivatives.
 
 ## Black-Scholes PDE - Hedging Argument
 
-Create portfolio $\Pi$ from a short position in one call option $f$, and a long position in $\delta$ units of the underlying, $X$, where $\delta = \frac{\partial f}{\partial X}$:
+Create portfolio $\Pi$ from a short position in the option $f$, and a long position in $\delta$ amount of the underlying, $X$, where $\delta = \frac{\partial f}{\partial X}$:
 
 $$\tag1$$
 
@@ -67,7 +67,7 @@ $$-rf \ {\color{blue}dt} +
 {\color{maroon}\frac {\partial f}{\partial X} \sigma X dW}
 $$
 
-Which simplifies to:
+Which simplifies to the Black-Scholes PDE:
 
 $$\tag8$$
 
