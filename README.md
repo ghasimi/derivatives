@@ -4,28 +4,29 @@ Summary notes on derivatives.
 
 ## Black-Scholes PDE - Hedging Argument
 
-Create portfolio $\pi$ from a short position in one call option $f$, and a long position in $\delta$ units of the underlying, $X$, where $\delta = \frac{\partial f}{\partial X}$:
+Create portfolio $\Pi$ from a short position in one call option $f$, and a long position in $\delta$ units of the underlying, $X$, where $\delta = \frac{\partial f}{\partial X}$:
 
 $$\tag1
-\pi = -f + \frac{\partial f}{\partial X} X
+\Pi = -f + \frac{\partial f}{\partial X} X
 $$
 
 Which implies:
 
-$$\tag2
-d\pi = -df + \frac{\partial f}{\partial X} \ dX
-$$
+$$\tag2 d\Pi = -df + \frac{\partial f}{\partial X} \ dX$$
 
 From another view, such portfolio has no risk because changes in the long and short position will offset each other. Therefore, the portfolio must yield risk-free return:
 
-$$\tag3
-\frac{d\pi}{\pi} = r \ dt \ \ \
-\Rightarrow \ \ \ d\pi = r \pi \ dt
+$$\tag3 \ \ 
+\frac{d\Pi}{\Pi} = r \ dt \
+\Rightarrow \ d\Pi = r \Pi \ dt
 $$
+
+In (3), substitute $\Pi$ with (1):
+$$\tag4 d\Pi = -rf \ dt + \frac{\partial f}{\partial X} r X \ dt$$
 
 Assume the underlying follows this stochastic differential equation, where $\mu$ is replaced with $r$ accodring to the risk-neutral setting:
 
-$$\tag4
+$$\tag5
 dX = r X dt + \sigma X dW
 $$
 
@@ -35,7 +36,7 @@ $$Where \ dW = \varepsilon \sqrt{dt} \ \, i.e. \varepsilon \sim N(0,1) \rightarr
 Given (3), and since $f\rightarrow f(X,t)$, from [Ito's lemma](https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma):
 
 
-$$\tag5
+$$\tag6
 $$
 
 $$df = 
@@ -46,9 +47,9 @@ $$df =
 $$
 
 
-Now in (2), substitute $d\pi$ with (3), $dX$ with (4), and $df$ with (5):
+Now in (2), substitute $d\Pi$ with (4), $dX$ with (5), and $df$ with (6):
 
-$$\tag6
+$$\tag7
 $$
 
 
