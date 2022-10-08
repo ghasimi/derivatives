@@ -10,16 +10,22 @@ $$\tag1
 \pi = -f + \frac{\partial f}{\partial X} X
 $$
 
-Such portfolio has no risk, because the long and short position will offset each other. Therefore, the portfolio must yield risk-free return:
+Which implies:
 
 $$\tag2
+d\pi = -df + \frac{\partial f}{\partial X} \ dX
+$$
+
+From another view, such portfolio has no risk because changes in the long and short position will offset each other. Therefore, the portfolio must yield risk-free return:
+
+$$\tag3
 \frac{d\pi}{\pi} = r \ dt \ \ \
 \Rightarrow \ \ \ d\pi = r \pi \ dt
 $$
 
 Assume the underlying follows this stochastic differential equation, where $\mu$ is replaced with $r$ accodring to the risk-neutral setting:
 
-$$\tag3
+$$\tag4
 dX = r X dt + \sigma X dW
 $$
 
@@ -29,7 +35,7 @@ $$Where \ dW = \varepsilon \sqrt{dt} \ \, i.e. \varepsilon \sim N(0,1) \rightarr
 Given (3), and since $f\rightarrow f(X,t)$, from [Ito's lemma](https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma):
 
 
-$$\tag4
+$$\tag5
 $$
 
 $$df = 
@@ -40,7 +46,9 @@ $$df =
 $$
 
 
+Now in (2), substitute $d\pi$ with (3), $dX$ with (4), and $df$ with (5):
 
-
+$$\tag6
+$$
 
 
