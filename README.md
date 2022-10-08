@@ -4,26 +4,33 @@ Summary notes on derivatives.
 
 ## Black-Scholes PDE - Hedging Argument
 
-Create portfolio $\pi$ of a short position in one call option $f$, and a long position in $\delta$ units of the underlying, $X$, where $\delta = \frac{\partial f}{\partial X}$.
+Create portfolio $\pi$ from a short position in one call option $f$, and a long position in $\delta$ units of the underlying, $X$, where $\delta = \frac{\partial f}{\partial X}$:
 
 $$\tag1
-\pi = -f + \frac{\partial f}{\partial X} X 
+\pi = -f + \frac{\partial f}{\partial X} X
 $$
 
-Assume the underlying follows this stochastic differential equation:
+Such portfolio has no risk, because the long and short position will offset each other. Therefore, the portfolio must yield risk-free return:
 
 $$\tag2
-dX = \mu X dt + \sigma X dW
+\frac{d\pi}{\pi} = r \ dt \ \ \
+\Rightarrow \ \ \ d\pi = r \pi \ dt
 $$
 
-Where $dW = \varepsilon \sqrt{dt} \ \, i.e. \varepsilon \sim N(0,1) \rightarrow dW \sim N(0,t) $
+Assume the underlying follows this stochastic differential equation, where $\mu$ is replaced with $r$ accodring to the risk-neutral setting:
+
+$$\tag3
+dX = r X dt + \sigma X dW
+$$
+
+$$Where \ dW = \varepsilon \sqrt{dt} \ \, i.e. \varepsilon \sim N(0,1) \rightarrow dW \sim N(0,t)$$
 
 
+Given (3), and since $f\rightarrow f(X,t)$, from [Ito's lemma](https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma):
 
-In a risk-netrial setting we replace $\mu\$ with $r$, and since $f$ is a function of time and the underlying, i.e. $f\rightarrow f(X,t)$, from [Ito's lemma](https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma):
 
-
-$$\tag3$$
+$$\tag4
+$$
 
 $$df = 
 (\frac {\partial f}{\partial t} + 
