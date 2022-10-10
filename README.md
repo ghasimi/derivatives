@@ -37,6 +37,46 @@ df = (
 \frac{\partial f}{\partial X} \sigma X dW
 $$
 
+
+Substituting the derivatives of $f$ in (3):
+
+$$
+df = (0 + 
+\frac{1}{X} \mu X +
+\frac{1}{2} \frac{-1}{X^2} \sigma^2 X^2) dt + 
+\frac{1}{X} \sigma X dW
+$$
+
+Which simplifies to:
+
+$$\tag4$$
+
+$$
+df = (\mu - \frac{\sigma^2}{2})dt + \sigma dW
+$$
+
+Now integerating from time $0$ to time $t$:
+
+$$
+f_t - f_0 = (\mu - \frac{\sigma^2}{2})t + \sigma W_t
+$$
+
+
+$$
+log(X_t) - log(X_0) = (\mu - \frac{\sigma^2}{2})t + \sigma W_t
+$$
+
+$$
+log(\frac{X_t}{X_0}) = (\mu - \frac{\sigma^2}{2})t + \sigma W_t
+$$
+
+$$\tag5$$
+
+$$
+X_t = X_0 \\ exp \left( (\mu - \frac{\sigma^2}{2})t + \sigma W_t \right)
+$$
+
+
 ## Black-Scholes PDE - Hedging Argument
 
 Create portfolio $\Pi$ from a short position in the option $f$, and a long position in $\delta$ amount of the underlying, $X$, where $\delta = \frac{\partial f}{\partial X}$:
