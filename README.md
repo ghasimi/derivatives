@@ -78,6 +78,13 @@ $$
 X_t = X_0 \\ exp \left( (\mu - \frac{\sigma^2}{2})t + \sigma W_t \right)
 $$
 
+Or equivalently:
+
+$$
+X_t = X_0 \\ exp \left( (\mu - \frac{\sigma^2}{2})t + \sigma \sqrt t \ \varepsilon \right)
+\ \ , \ \ \varepsilon \sim N(0,1)
+$$
+
 
 ## Black-Scholes PDE - Hedging Argument
 
