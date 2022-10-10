@@ -3,7 +3,7 @@ Summary notes on derivatives.
 
 ## Geometric Brownian Motion (GBM)
 
-GBM is a model for the evolution of an asset price, $X_t$, where the returns follow a standard brownian motion with the following stochastic differential equation:
+GBM is a model for the evolution of an asset price, $X_t$, where the returns follow a standard brownian motion with the following stochastic differential equation (SDE):
 
 $$\tag1$$
 
@@ -69,6 +69,8 @@ $$
 $$
 log(\frac{X_t}{X_0}) = (\mu - \frac{\sigma^2}{2})t + \sigma W_t
 $$
+
+Finally, the solution to the SDE:
 
 $$\tag5$$
 
