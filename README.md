@@ -33,12 +33,9 @@ $$
 df = (
 \frac{\partial f}{\partial t} + 
 \frac{\partial f}{\partial X} \mu X +
-\frac{1}{2} \frac{\partial^2 f}{\partial X^2}) dt + 
+\frac{1}{2} \frac{\partial^2 f}{\partial X^2} \sigma^2 X^2) dt + 
 \frac{\partial f}{\partial X} \sigma X dW
 $$
-
-
-
 
 ## Black-Scholes PDE - Hedging Argument
 
