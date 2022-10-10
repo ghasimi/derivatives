@@ -1,6 +1,83 @@
 # derivatives
 Summary notes on derivatives.
 
+## Geometric Brownian Motion (GBM)
+
+GBM is a model for the evolution of an asset price, $X_t$, where the returns follow a standard brownian motion with the following stochastic differential equation (SDE):
+
+$$\tag1$$
+
+$$
+\frac{dX}{X} = \mu dt + \sigma dW \ \ \rightarrow \ \ dX =  \mu X dt + \sigma X dW
+$$
+
+And $dW$ is a Wierner process:
+
+$$
+dW = \varepsilon \sqrt dt \sim N(0, t)
+$$
+
+The $dX/X$ suggests that the price function, $f$, is in the following form:
+
+$$\tag2$$
+
+$$
+f = log(X)
+$$
+
+Given (1), (2), and [Ito's lemma](https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma):
+
+$$\tag3$$
+
+$$
+df = (
+\frac{\partial f}{\partial t} + 
+\frac{\partial f}{\partial X} \mu X +
+\frac{1}{2} \frac{\partial^2 f}{\partial X^2} \sigma^2 X^2) dt + 
+\frac{\partial f}{\partial X} \sigma X dW
+$$
+
+
+Substituting the derivatives of $f$ in (3):
+
+$$
+df = (0 + 
+\frac{1}{X} \mu X +
+\frac{1}{2} \frac{-1}{X^2} \sigma^2 X^2) dt + 
+\frac{1}{X} \sigma X dW
+$$
+
+Which simplifies to:
+
+$$\tag4$$
+
+$$
+df = (\mu - \frac{\sigma^2}{2})dt + \sigma dW
+$$
+
+Now integerating from time $0$ to time $t$:
+
+$$
+f_t - f_0 = (\mu - \frac{\sigma^2}{2})t + \sigma W_t
+$$
+
+
+$$
+log(X_t) - log(X_0) = (\mu - \frac{\sigma^2}{2})t + \sigma W_t
+$$
+
+$$
+log(\frac{X_t}{X_0}) = (\mu - \frac{\sigma^2}{2})t + \sigma W_t
+$$
+
+Finally, the solution to the SDE:
+
+$$\tag5$$
+
+$$
+X_t = X_0 \\ exp \left( (\mu - \frac{\sigma^2}{2})t + \sigma W_t \right)
+$$
+
 
 ## Black-Scholes PDE - Hedging Argument
 
