@@ -85,6 +85,11 @@ X_t = X_0 \\ exp \left( (\mu - \frac{\sigma^2}{2})t + \sigma \sqrt t \ \varepsil
 \ \ , \ \ \varepsilon \sim N(0,1)
 $$
 
+### Sample code
+
+[GBM in Python](https://github.com/ghasimi/derivatives/blob/main/gbm.py)
+
+
 
 ## Black-Scholes PDE - Hedging Argument
 
